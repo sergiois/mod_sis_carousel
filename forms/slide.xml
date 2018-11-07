@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<field
+		name="image"
+		type="media"
+		label="MOD_SIS_CAROUSEL_IMAGE_LABEL"
+		description="MOD_SIS_CAROUSEL_IMAGE_DESC"
+	/>
+
+	<field
+		name="title"
+		type="text"
+		label="MOD_SIS_CAROUSEL_TITLE_LABEL"
+		description="MOD_SIS_CAROUSEL_TITLE_DESC"
+	/>
+
+	<field
+		name="description"
+		type="textarea"
+		rows="5"
+		class="input-xxlarge"
+		label="MOD_SIS_CAROUSEL_DESCRIPTION_LABEL"
+		description="MOD_SIS_CAROUSEL_DESCRIPTION_DESC"
+	/>
+
+	<field
+		name="url"
+		type="url"
+		label="MOD_SIS_CAROUSEL_URL_LABEL"
+		description="MOD_SIS_CAROUSEL_URL_DESC"
+	/>
+</form>

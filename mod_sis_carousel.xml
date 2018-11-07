@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" method="upgrade" client="site">
+	<name>MOD_SIS_CAROUSEL</name>
+	<creationDate>Nov 2018</creationDate>
+	<author>Sergio Iglesias</author>
+	<authorEmail>info@sergioiglesias.net</authorEmail>
+	<authorUrl>https://sergioiglesias.net</authorUrl>
+	<copyright>Copyright © 2018 - All rights reserved.</copyright>
+	<license>GNU General Public License v2.0</license>
+	<version>1.0.0</version>
+	<description>MOD__P_CUSTOM_SIS_CAROUSEL__P_</description>
+	<files>
+		<filename module="mod_sis_carousel">mod_sis_carousel.php</filename>
+		<filename>mod_sis_carousel.xml</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+		<folder>forms</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="templateframework"
+					type="list"
+					label="MOD_SIS_CAROUSEL_TEMPLATE_LABEL"
+					description="MOD_SIS_CAROUSEL_TEMPLATE_DESC"
+					default=""
+					>
+					<option value="">Bootstrap 3</option>
+					<option value="_bootstrap4">Bootstrap 4</option>
+				</field>
+				<field
+					name="width"
+					type="text"
+					label="MOD_SIS_CAROUSEL_WIDTH_LABEL"
+					description="MOD_SIS_CAROUSEL_WIDTH_DESC" />
+				<field
+					name="height"
+					type="text"
+					label="MOD_SIS_CAROUSEL_HEIGHT_LABEL"
+					description="MOD_SIS_CAROUSEL_HEIGHT_DESC" />
+				<field
+					name="show_controls"
+					type="radio"
+					default="0"
+					class="btn-group btn-group-yesno"
+					label="MOD_SIS_CAROUSEL_SHOW_CONTROLS_LABEL"
+					description="MOD_SIS_CAROUSEL_SHOW_CONTROLS_DESC"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field
+					name="show_indicators"
+					type="radio"
+					default="0"
+					class="btn-group btn-group-yesno"
+					label="MOD_SIS_CAROUSEL_SHOW_INDICATORS_LABEL"
+					description="MOD_SIS_CAROUSEL_SHOW_INDICATORS_DESC"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field
+					name="show_title"
+					type="radio"
+					default="0"
+					class="btn-group btn-group-yesno"
+					label="MOD_SIS_CAROUSEL_SHOW_TITLE_LABEL"
+					description="MOD_SIS_CAROUSEL_SHOW_TITLE_DESC"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field
+					name="show_description"
+					type="radio"
+					default="0"
+					class="btn-group btn-group-yesno"
+					label="MOD_SIS_CAROUSEL_SHOW_DESCRIPTION_LABEL"
+					description="MOD_SIS_CAROUSEL_SHOW_DESCRIPTION_DESC"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field
+					name="show_url"
+					type="radio"
+					default="0"
+					class="btn-group btn-group-yesno"
+					label="MOD_SIS_CAROUSEL_SHOW_URL_LABEL"
+					description="MOD_SIS_CAROUSEL_SHOW_URL_DESC"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field
+					name="images"
+					type="subform"
+					multiple="true"
+					formsource="modules/mod_sis_carousel/forms/slide.xml"
+					label="MOD_SIS_CAROUSEL_IMAGES_LABEL"
+					description="mod_sis_carousel_IMAGES_DESC"
+				/>
+			</fieldset>
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config> 
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_sis_carousel.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_sis_carousel.ini</language>
+		<language tag="es-ES">es-ES/es-ES.mod_sis_carousel.sys.ini</language>
+		<language tag="es-ES">es-ES/es-ES.mod_sis_carousel.ini</language>
+	</languages>
+</extension>
