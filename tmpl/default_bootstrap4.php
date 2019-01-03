@@ -5,6 +5,27 @@
  * @author 		Sergio Iglesias (@sergiois)
  */
 defined('_JEXEC') or die;
+$client = JFactory::getApplication()->client;
+if($client->mobile && $params->get('touchswipe', 0)):
+$doc = JFactory::getDocument();
+$doc->addScript(Juri::base() . 'modules/mod_sis_carousel/assets/js/jquery.touchSwipe.min.js');
+$js = 'jQuery(function() {
+    jQuery("#'.$module->module.$module->id.'").swipe( {
+        swipeStatus:function(event, phase, direction, distance, duration, fingers, fingerData, currentDirection)
+        {
+            if (direction == "left")
+            {   
+                jQuery(this).carousel("next");
+            }
+            if (direction == "right")
+            {
+                jQuery(this).carousel("prev");
+            }
+        },
+    });
+});';
+$doc->addScriptDeclaration($js);
+endif;
 ?>
 <div id="<?php echo $module->module.$module->id; ?>" class="carousel slide" data-ride="carousel">
     <?php if($params->get('show_indicators')): ?>
@@ -50,3 +71,21 @@ defined('_JEXEC') or die;
     </a>
     <?php endif; ?>
 </div>
+<script>
+jQuery(function() {
+    jQuery("#<?php echo $module->module.$module->id; ?>").swipe( {
+        swipeStatus:function(event, phase, direction, distance, duration, fingers, fingerData, currentDirection)
+        {
+            if (direction == 'left')
+            {   
+                jQuery(this).carousel('next');
+            }
+            if (direction == 'right')
+            {
+                jQuery(this).carousel('prev');
+            }
+        },
+        
+    });
+});
+</script>
