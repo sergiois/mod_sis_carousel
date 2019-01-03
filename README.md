@@ -26,6 +26,9 @@ Custom Image Carousel in Bootstrap 3 and 4
 ### Version 1.1.1 [2019-01-03]
 * **[Added]** Add integrate with the Joomla! Update System.
 
+### Version 1.1.2 [2019-01-03]
+* **[Added]** Fixed xml install issue (assets folder).
+
 * * *
 
 ## Copyright & License
