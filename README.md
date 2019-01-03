@@ -23,6 +23,9 @@ Custom Image Carousel in Bootstrap 3 and 4
 ### Version 1.1.0 [2019-01-03]
 * **[Added]** Add Touch Swipe in a mobile view - [view jQuery plugin](https://github.com/mattbryson/TouchSwipe-Jquery-Plugin "view jQuery plugin").
 
+### Version 1.1.1 [2019-01-03]
+* **[Added]** Add integrate with the Joomla! Update System.
+
 * * *
 
 ## Copyright & License
