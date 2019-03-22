@@ -29,6 +29,9 @@ Custom Image Carousel in Bootstrap 3 and 4
 ### Version 1.1.2 [2019-01-03]
 * **[Added]** Fixed xml install issue (assets folder).
 
+### Version 1.1.3 [2019-03-22]
+* **[Added]** Add crossfade in Bootstrap 4 view.
+
 * * *
 
 ## Copyright & License

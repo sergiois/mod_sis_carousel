@@ -27,7 +27,7 @@ $js = 'jQuery(function() {
 $doc->addScriptDeclaration($js);
 endif;
 ?>
-<div id="<?php echo $module->module.$module->id; ?>" class="carousel slide" data-ride="carousel">
+<div id="<?php echo $module->module.$module->id; ?>" class="carousel slide<?php if($params->get('fade_effect', 0)){ echo ' carousel-fade'; } ?>" data-ride="carousel">
     <?php if($params->get('show_indicators')): ?>
     <ol class="carousel-indicators">
     <?php foreach($images as $key => $image) : ?>
