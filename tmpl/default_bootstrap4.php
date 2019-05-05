@@ -27,12 +27,14 @@ $js = 'jQuery(function() {
 $doc->addScriptDeclaration($js);
 endif;
 ?>
-<div id="<?php echo $module->module.$module->id; ?>" class="carousel slide<?php if($params->get('fade_effect', 0)){ echo ' carousel-fade'; } ?>" data-ride="carousel">
+<div id="<?php echo $module->module.$module->id; ?>" class="carousel slide <?php if($params->get('fade_effect', 0)){ echo 'carousel-fade'; } ?>" data-ride="carousel">
     <?php if($params->get('show_indicators')): ?>
     <ol class="carousel-indicators">
+    <?php $i = 0; ?>
     <?php foreach($images as $key => $image) : ?>
         <?php reset($images); ?>
-        <li data-target="#<?php echo $module->module.$module->id; ?>" data-slide-to="0" class="<?php if($key === key($images)): echo 'active'; endif; ?>"></li>
+        <li data-target="#<?php echo $module->module.$module->id; ?>" data-slide-to="<?php echo $i; ?>" class="<?php if($key === key($images)): echo 'active'; endif; ?>"></li>
+        <?php $i++; ?>
     <?php endforeach; ?>
     </ol>
     <?php endif; ?>
@@ -71,21 +73,3 @@ endif;
     </a>
     <?php endif; ?>
 </div>
-<script>
-jQuery(function() {
-    jQuery("#<?php echo $module->module.$module->id; ?>").swipe( {
-        swipeStatus:function(event, phase, direction, distance, duration, fingers, fingerData, currentDirection)
-        {
-            if (direction == 'left')
-            {   
-                jQuery(this).carousel('next');
-            }
-            if (direction == 'right')
-            {
-                jQuery(this).carousel('prev');
-            }
-        },
-        
-    });
-});
-</script>

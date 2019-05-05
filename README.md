@@ -18,7 +18,7 @@ Custom Image Carousel in Bootstrap 3 and 4
 # Changelogs
 
 ### Version 1.0.0 [2018-11-07]
-* **[Added]** Integration with Bootstrap Framework (versioins: 3 and 4)
+* **[Added]** Integration with Bootstrap Framework (versioin: 3 and 4)
 
 ### Version 1.1.0 [2019-01-03]
 * **[Added]** Add Touch Swipe in a mobile view - [view jQuery plugin](https://github.com/mattbryson/TouchSwipe-Jquery-Plugin "view jQuery plugin").
@@ -31,6 +31,9 @@ Custom Image Carousel in Bootstrap 3 and 4
 
 ### Version 1.1.3 [2019-03-22]
 * **[Added]** Add crossfade in Bootstrap 4 view.
+
+### Version 1.1.4 [2019-05-05]
+* **[Fixed]** Fixes several bugs.
 
 * * *
 
