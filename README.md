@@ -35,6 +35,9 @@ Custom Image Carousel in Bootstrap 3 and 4
 ### Version 1.1.4 [2019-05-05]
 * **[Fixed]** Fixes several bugs.
 
+### Version 1.1.5 [2019-10-13]
+* **[Fixed]** Fixes several warning.
+
 * * *
 
 ## Copyright & License

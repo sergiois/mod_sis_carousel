@@ -9,6 +9,6 @@ defined('_JEXEC') or die;
 $images	= $params->get("images");
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'), ENT_COMPAT, 'UTF-8');
 $layout = $params->get('layout', 'default').''.$params->get('templateframework');
-if(count($images)):
+if(count((array)$images)):
     require JModuleHelper::getLayoutPath('mod_sis_carousel', $layout);
 endif;
