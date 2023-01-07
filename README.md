@@ -1,5 +1,5 @@
 # mod_sis_carousel
-Custom Image Carousel in Bootstrap 3 and 4
+Custom Image Carousel in Bootstrap 3, 4 and 5
 [GitHub Web](https://sergiois.github.io/sis-carousel.html "SIS Carousel")
 
 ## Installation and Usage
@@ -37,6 +37,10 @@ Custom Image Carousel in Bootstrap 3 and 4
 
 ### Version 1.1.5 [2019-10-13]
 * **[Fixed]** Fixes several warning.
+
+### Version 1.2.0 [2023-01-07]
+* **[Added]** Joomla 4 compatibility
+* **[Added]** Bootstrap 5 compatibility
 
 * * *
 

@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="module" method="upgrade" client="site">
 	<name>MOD_SIS_CAROUSEL</name>
-	<creationDate>Nov 2018</creationDate>
+	<creationDate>January 2023</creationDate>
 	<author>Sergio Iglesias</author>
 	<authorEmail>info@sergioiglesias.net</authorEmail>
 	<authorUrl>https://sergioiglesias.net</authorUrl>
-	<copyright>Copyright © 2018 - All rights reserved.</copyright>
+	<copyright>Copyright © 2023 - All rights reserved.</copyright>
 	<license>GNU General Public License v2.0</license>
-	<version>1.1.5</version>
+	<version>1.2.0</version>
 	<description>MOD__P_CUSTOM_SIS_CAROUSEL__P_</description>
 	<files>
 		<filename module="mod_sis_carousel">mod_sis_carousel.php</filename>
 		<filename>mod_sis_carousel.xml</filename>
 		<filename>index.html</filename>
 		<folder>assets</folder>
-		<folder>language</folder>
 		<folder>tmpl</folder>
 		<folder>forms</folder>
 	</files>
@@ -30,6 +29,7 @@
 					>
 					<option value="">Bootstrap 3</option>
 					<option value="_bootstrap4">Bootstrap 4</option>
+					<option value="_bootstrap5">Bootstrap 5</option>
 				</field>
 				<field
 					name="width"
@@ -44,8 +44,9 @@
 				<field
 					name="show_controls"
 					type="radio"
+					layout="joomla.form.field.radio.switcher"
 					default="0"
-					class="btn-group btn-group-yesno"
+					filter="integer"
 					label="MOD_SIS_CAROUSEL_SHOW_CONTROLS_LABEL"
 					description="MOD_SIS_CAROUSEL_SHOW_CONTROLS_DESC"
 				>
@@ -55,8 +56,9 @@
 				<field
 					name="show_indicators"
 					type="radio"
+					layout="joomla.form.field.radio.switcher"
 					default="0"
-					class="btn-group btn-group-yesno"
+					filter="integer"
 					label="MOD_SIS_CAROUSEL_SHOW_INDICATORS_LABEL"
 					description="MOD_SIS_CAROUSEL_SHOW_INDICATORS_DESC"
 				>
@@ -66,8 +68,9 @@
 				<field
 					name="show_title"
 					type="radio"
+					layout="joomla.form.field.radio.switcher"
 					default="0"
-					class="btn-group btn-group-yesno"
+					filter="integer"
 					label="MOD_SIS_CAROUSEL_SHOW_TITLE_LABEL"
 					description="MOD_SIS_CAROUSEL_SHOW_TITLE_DESC"
 				>
@@ -77,8 +80,9 @@
 				<field
 					name="show_description"
 					type="radio"
+					layout="joomla.form.field.radio.switcher"
 					default="0"
-					class="btn-group btn-group-yesno"
+					filter="integer"
 					label="MOD_SIS_CAROUSEL_SHOW_DESCRIPTION_LABEL"
 					description="MOD_SIS_CAROUSEL_SHOW_DESCRIPTION_DESC"
 				>
@@ -88,8 +92,9 @@
 				<field
 					name="show_url"
 					type="radio"
+					layout="joomla.form.field.radio.switcher"
 					default="0"
-					class="btn-group btn-group-yesno"
+					filter="integer"
 					label="MOD_SIS_CAROUSEL_SHOW_URL_LABEL"
 					description="MOD_SIS_CAROUSEL_SHOW_URL_DESC"
 				>
@@ -99,8 +104,9 @@
 				<field
 					name="touchswipe"
 					type="radio"
+					layout="joomla.form.field.radio.switcher"
 					default="0"
-					class="btn-group btn-group-yesno"
+					filter="integer"
 					label="MOD_SIS_CAROUSEL_SHOW_TOUCHSWIPE_LABEL"
 					description="MOD_SIS_CAROUSEL_SHOW_TOUCHSWIPE_DESC"
 				>
@@ -110,8 +116,9 @@
 				<field
                     name="fade_effect"
                     type="radio"
+					layout="joomla.form.field.radio.switcher"
                     default="0"
-                    class="btn-group btn-group-yesno"
+                    filter="integer"
                     label="MOD_SIS_CAROUSEL_FADE_EFFECT_LABEL"
                     description="MOD_SIS_CAROUSEL_FADE_EFFECT_DESC"
                 >
@@ -127,44 +134,49 @@
 					description="mod_sis_carousel_IMAGES_DESC"
 				/>
 			</fieldset>
-			<fieldset
-				name="advanced">
+			<fieldset name="advanced">
 				<field
 					name="layout"
 					type="modulelayout"
 					label="JFIELD_ALT_LAYOUT_LABEL"
-					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+					class="form-select"
+					validate="moduleLayout"
+				/>
 
 				<field
 					name="moduleclass_sfx"
-					type="textarea" rows="3"
+					type="textarea"
 					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
-					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+					rows="3"
+					validate="CssIdentifier"
+				/>
 
 				<field
 					name="cache"
 					type="list"
-					default="1"
 					label="COM_MODULES_FIELD_CACHING_LABEL"
-					description="COM_MODULES_FIELD_CACHING_DESC">
-					<option
-						value="1">JGLOBAL_USE_GLOBAL</option>
-					<option
-						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+					default="1"
+					filter="integer"
+					validate="options"
+					>
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
 				</field>
 
 				<field
 					name="cache_time"
-					type="text"
-					default="900"
+					type="number"
 					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
-					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+					default="900"
+					filter="integer"
+				/>
+
 				<field
 					name="cachemode"
 					type="hidden"
-					default="static">
-					<option
-						value="static"></option>
+					default="static"
+					>
+					<option value="static"></option>
 				</field>
 			</fieldset>
 		</fields>
