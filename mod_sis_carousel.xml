@@ -7,7 +7,7 @@
 	<authorUrl>https://sergioiglesias.net</authorUrl>
 	<copyright>Copyright © 2023 - All rights reserved.</copyright>
 	<license>GNU General Public License v2.0</license>
-	<version>1.2.0</version>
+	<version>1.2.1</version>
 	<description>MOD__P_CUSTOM_SIS_CAROUSEL__P_</description>
 	<files>
 		<filename module="mod_sis_carousel">mod_sis_carousel.php</filename>
@@ -41,6 +41,12 @@
 					type="text"
 					label="MOD_SIS_CAROUSEL_HEIGHT_LABEL"
 					description="MOD_SIS_CAROUSEL_HEIGHT_DESC" />
+				<field
+					name="interval"
+					type="text"
+					label="MOD_SIS_CAROUSEL_INTERVAL_LABEL"
+					description="MOD_SIS_CAROUSEL_INTERVAL_DESC"
+					default="5000" />
 				<field
 					name="show_controls"
 					type="radio"

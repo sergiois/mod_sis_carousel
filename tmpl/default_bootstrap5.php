@@ -25,7 +25,7 @@ HTMLHelper::_('bootstrap.carousel', '.selector');
     <div class="carousel-inner">
     <?php foreach($images as $key => $image) : ?>
         <?php reset($images); ?>
-        <div class="carousel-item<?php if($key === key($images)): echo ' active'; endif; ?>">
+        <div class="carousel-item<?php if($key === key($images)): echo ' active'; endif; ?>" data-bs-interval="<?php echo $params->get('interval', 5000); ?>">
             <?php if($params->get('show_url')): ?>
                 <a href="<?php echo $image->url; ?>" target="<?php echo $image->open_url; ?>" title="<?php echo $image->title; ?>">
             <?php endif; ?>

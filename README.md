@@ -42,6 +42,9 @@ Custom Image Carousel in Bootstrap 3, 4 and 5
 * **[Added]** Joomla 4 compatibility
 * **[Added]** Bootstrap 5 compatibility
 
+### Version 1.2.1 [2023-04-19]
+* **[Added]** Add time interval time between slides
+
 * * *
 
 ## Copyright & License
