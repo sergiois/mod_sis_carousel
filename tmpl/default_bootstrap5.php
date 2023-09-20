@@ -27,7 +27,7 @@ HTMLHelper::_('bootstrap.carousel', '.selector');
         <?php reset($images); ?>
         <div class="carousel-item<?php if($key === key($images)): echo ' active'; endif; ?>" data-bs-interval="<?php echo $params->get('interval', 5000); ?>">
             <?php if($params->get('show_url')): ?>
-                <a href="<?php echo $image->url; ?>" target="<?php echo $image->open_url; ?>" title="<?php echo $image->title; ?>">
+                <a href="<?php echo $image->url; ?>" target="<?php echo $image->open_link; ?>" title="<?php echo $image->title; ?>">
             <?php endif; ?>
             <img class="d-block" src="<?php echo $image->image; ?>" alt="<?php echo $image->title; ?>" <?php if($params->get('width')): echo 'width="'.$params->get('width').'"'; endif; ?> <?php if($params->get('height')): echo 'height="'.$params->get('height').'"'; endif; ?>>
             <?php if($params->get('show_url')): ?>

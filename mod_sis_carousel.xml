@@ -7,7 +7,7 @@
 	<authorUrl>https://sergioiglesias.net</authorUrl>
 	<copyright>Copyright © 2023 - All rights reserved.</copyright>
 	<license>GNU General Public License v2.0</license>
-	<version>1.2.1</version>
+	<version>1.2.2</version>
 	<description>MOD__P_CUSTOM_SIS_CAROUSEL__P_</description>
 	<files>
 		<filename module="mod_sis_carousel">mod_sis_carousel.php</filename>

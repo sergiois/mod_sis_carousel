@@ -29,4 +29,15 @@
 		label="MOD_SIS_CAROUSEL_URL_LABEL"
 		description="MOD_SIS_CAROUSEL_URL_DESC"
 	/>
+
+	<field
+		name="open_link"
+		type="list"
+		label="MOD_SIS_CAROUSEL_OPENLINK_LABEL"
+		description="MOD_SIS_CAROUSEL_OPENLINK_DESC"
+		default="self"
+		>
+		<option value="_self">MOD_SIS_CAROUSEL_OPTION_SELF_VALUE</option>
+		<option value="_blank">MOD_SIS_CAROUSEL_OPTION_BLANK_VALUE</option>
+	</field>
 </form>

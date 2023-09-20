@@ -1,6 +1,7 @@
 # mod_sis_carousel
 Custom Image Carousel in Bootstrap 3, 4 and 5
-[GitHub Web](https://sergiois.github.io/sis-carousel.html "SIS Carousel")
+
+[GitHub Web - SIS Carousel](https://sergiois.github.io/sis-carousel.html "SIS Carousel")
 
 ## Installation and Usage
 * Install the module using Joomla! Extension Manager
@@ -12,6 +13,7 @@ Custom Image Carousel in Bootstrap 3, 4 and 5
     * Show or hide title.
     * Show or hide description.
     * Show or hide URL.
+    * Open link option
 
 * * *
 
@@ -44,6 +46,9 @@ Custom Image Carousel in Bootstrap 3, 4 and 5
 
 ### Version 1.2.1 [2023-04-19]
 * **[Added]** Add time interval time between slides
+
+### Version 1.2.2 [2023-09-20]
+* **[Added]** Add open link option
 
 * * *
 

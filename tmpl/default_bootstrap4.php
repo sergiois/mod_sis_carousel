@@ -43,7 +43,7 @@ endif;
         <?php reset($images); ?>
         <div class="carousel-item<?php if($key === key($images)): echo ' active'; endif; ?>">
             <?php if($params->get('show_url')): ?>
-                <a href="<?php echo $image->url; ?>" title="<?php echo $image->title; ?>">
+                <a href="<?php echo $image->url; ?>" title="<?php echo $image->title; ?>" target="<?php echo $image->open_link; ?>">
             <?php endif; ?>
             <img class="d-block" src="<?php echo $image->image; ?>" alt="<?php echo $image->title; ?>" <?php if($params->get('width')): echo 'width="'.$params->get('width').'"'; endif; ?> <?php if($params->get('height')): echo 'height="'.$params->get('height').'"'; endif; ?>>
             <?php if($params->get('show_url')): ?>
